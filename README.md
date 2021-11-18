@@ -30,7 +30,7 @@ Specs:
 This hardware is quite simple to configure and works well with all three options. Note: for GNU/Linux, I've had the best success with Manjaro so far. On Fedora, everything except power management works but the battery was not recognized.
 
 
-| Hardware           | GNU/Linux            | Mac OS Catalina     | Brunch		|
+| Hardware           | GNU/Linux            | Mac OS              | Brunch		|
 |--------------------|----------------------|---------------------|-----------------|
 | WiFi               | Working              | Working             | Working         | 
 | Bluetooth          | Working              | Working             | Working	        | 
@@ -54,12 +54,12 @@ Windows 11 should be installed first if you want to use it.
 ## Part 2: Linux (Manjaro, Fedora)
 Burn ISO, boot and configure. Manjaro worked perfectly for me.
 
-## Part 3: MacOS Catalina
-Download the lastest version of Opencore. I useed Catalina on this hardware, YMMV with Big Sur or Monterey. 
+## Part 3: MacOS 
+Download the lastest version of Opencore. I useed Big Sur on this hardware, YMMV with Monterey. 
  
-1. Download and set up your Mac OS X Catalina USB install media. [gibMacOS](https://github.com/corpnewt/gibMacOS) 
-    - Before you make the install USB, make sure it is formatted as Mac OS Extended (Journaled) with GUID Partition Map.
-    - To create the installer on a Mac in Terminal: `sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume` and replace MyVolume with the name of your target drive.
+1. Download and set up your Mac OS X Big Sur USB install media. [gibMacOS](https://github.com/corpnewt/gibMacOS) 
+    - Before you make the install USB, make sure it is formatted as APFS with GUID Partition Map.
+    - To create the installer, one easy option is [TINU](https://github.com/ITzTravelInTime/TINU).
 
 2. Create your EFI based on the latest OC Guide for [this IceLake generation](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html). A few notes on getting OpenCore to work, in my case:
   - Airportitwlm works perfectly with this wifi card, just make sure you get the version for version of MacOS you're using.
@@ -68,9 +68,9 @@ Download the lastest version of Opencore. I useed Catalina on this hardware, YMM
   - VoodooI2C + VoodooI2ELAN will enable the touchpad, but the touchscreen won't work. I opted for this. 
   - For iGPU to work, you'll need the iGPU.plist I've included in this repo in your device properties section. 
     
-3. When the Catalina install media is ready, mount the EFI partition with the [MountEFI](https://github.com/corpnewt/MountEFI) utility and copy the contents of the latest EFI linked above into this partition.
+3. When the Mac OS install media is ready, mount the EFI partition with the [MountEFI](https://github.com/corpnewt/MountEFI) utility and copy the contents of the latest EFI linked above into this partition.
 
-4. Boot from the Catalina installer. In Disk Utility, go to Show All Devices in the top left, and then select the entire drive, and format the partition you have identified for MacOS and make sure to use APFS.
+4. Boot from the Mac OS installer. In Disk Utility, go to Show All Devices in the top left, and then select the entire drive, and format the partition you have identified for MacOS and make sure to use APFS.
   
 5. You will need to copy the EFI to your insternal SSD drive using the same procedure from step 3. In the UEFI boot settings (Hold Volume UP at boot) make sure you move Windows Boot Manager down in the list of boot options, so that USB boot and internal boot are in the first two spots. This will ensure the computer uses OpenCore as a boot option prior to Windows Boot Manager. 
 
