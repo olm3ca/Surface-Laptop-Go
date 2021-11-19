@@ -1,4 +1,4 @@
-# Microsoft Surface Laptop Go Multiboot
+# Microsoft Surface Laptop Go
 Install guide for booting Mac OS, Linux and ChromeOS with Brunch.
 
 |      |       |
@@ -67,6 +67,7 @@ Download the lastest version of Opencore. I useed Big Sur on this hardware, YMMV
   - VoodooI2C + VoodooI2CHID will enable the touchscreen, but the touchpad won't work.
   - VoodooI2C + VoodooI2ELAN will enable the touchpad, but the touchscreen won't work. I opted for this. 
   - For iGPU to work, you'll need the iGPU.plist I've included in this repo in your device properties section. 
+  - Battery readouts may never work. Recent Surface models don't use ACPI Operating Regions/Fields to get their battery info.
     
 3. When the Mac OS install media is ready, mount the EFI partition with the [MountEFI](https://github.com/corpnewt/MountEFI) utility and copy the contents of the latest EFI linked above into this partition.
 
