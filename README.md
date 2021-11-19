@@ -63,7 +63,7 @@ Download the lastest version of Opencore. I useed Big Sur on this hardware, YMMV
 
 2. Create your EFI based on the latest OC Guide for [this IceLake generation](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html). A few notes on getting OpenCore to work, in my case:
   - Airportitwlm works perfectly with this wifi card, just make sure you get the version for version of MacOS you're using.
-  - I tried all combinations of the ALC274 codec with AppleALC. No luck, but VoodooHDA works well. For now, I'll take it. 
+  - I tried all combinations of the ALC274 codec with AppleALC. No luck, but VoodooHDA works well. For now, I'll take it. Note: on Big Sur 11.3+ there is a fix that needs to be applied for audio to work, see [this post](https://www.insanelymac.com/forum/topic/314406-voodoohda-297/?do=findComment&comment=2756841) for more details.
   - VoodooI2C + VoodooI2CHID will enable the touchscreen, but the touchpad won't work.
   - VoodooI2C + VoodooI2ELAN will enable the touchpad, but the touchscreen won't work. I opted for this. 
   - For iGPU to work, you'll need the iGPU.plist I've included in this repo in your device properties section. 
