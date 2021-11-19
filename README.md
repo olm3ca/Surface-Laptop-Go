@@ -1,6 +1,8 @@
 # Microsoft Surface Laptop Go
 Install guide for booting Mac OS, Linux and ChromeOS with Brunch.
- <img src="SLG2.png" width="354">
+
+<img src="SLG2.png" width="354">
+
 ### Upgrade that SSD...
 This guide is for the 128GB / 256GB version only, as they have NVMe SSDs. If you have a 64GB it is EMMC, and part of the motherboard, so you can't upgrade it.
 - On Surface laptops with M.2 drives like this one, upgrading the SSD is quite easy. Just make sure to create a recovery drive before you start - any external USB with 16GB of space will do.
