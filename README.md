@@ -37,7 +37,7 @@ This hardware is quite simple to configure and works well with all three options
 | Suspend / Sleep    | Working              | Not Working         | Working         | 
 | Touchpad           | Working	            | Working             | Working     | 
 | Graphics Accel.    | Working              | Working	            | Working    	    | 
-| Sound              | Working              | Working             | Not Working	    | 
+| Sound              | Working              | Working             | Working	    | 
 | Touchscreen        | Working              | Working             | Working         | 
 | Screen brightness  | Working		          | Working	            | Working	    | 
 | Power Management   | Working (Manjaro)    | Not Working	        | Working	    | 
@@ -76,12 +76,10 @@ Download the lastest version of Opencore. I useed Big Sur on this hardware, YMMV
 5. You will need to copy the EFI to your insternal SSD drive using the same procedure from step 3. In the UEFI boot settings (Hold Volume UP at boot) make sure you move Windows Boot Manager down in the list of boot options, so that USB boot and internal boot are in the first two spots. This will ensure the computer uses OpenCore as a boot option prior to Windows Boot Manager. 
 
 
-## Part 4: Brunch - install ChromeOS on a partition. (WIP)
+## Part 4: Brunch - install ChromeOS on a partition. Everything works! 
 Brunch installs into an image for our device and allows full access to the hardware with a few exceptions:
  - The install instructions fail if booting from a Linux Live USB, as we only have 8GB of RAM and it fills up quickly with the Chrome OS image. To get around this, you will need to have Linux installed first in a partition.
- - Fingerprint reader does not work (expected behavior) 
- - Google Play:
- - Audio:   
+ - Fingerprint reader does not work (expected behavior)   
 
  1. Read the instructions on the official Brunch repo: [https://github.com/sebanc/brunch](https://github.com/sebanc/brunch)
  2. [Go to CrOS Updates](https://cros-updates-serving.appspot.com/) and search for "rammus", then download the latest recvovery. 
