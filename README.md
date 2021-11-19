@@ -3,7 +3,7 @@ Install guide for booting Mac OS, Linux and ChromeOS with Brunch.
 
 |      |       |
 |------------|-------------|
-|<img src="SLG1.png" width="354">|<img src="SLG.png" width="354">|
+|<img src="SLG2.png" width="354">|<img src="SLG.png" width="354">|
 
 ### Upgrade that SSD...
 This guide is for the 128GB / 256GB version only, as they have NVMe SSDs. If you have a 64GB it is EMMC, and part of the motherboard, so you can't upgrade it. 
@@ -76,8 +76,8 @@ Download the lastest version of Opencore. I useed Big Sur on this hardware, YMMV
 5. You will need to copy the EFI to your insternal SSD drive using the same procedure from step 3. In the UEFI boot settings (Hold Volume UP at boot) make sure you move Windows Boot Manager down in the list of boot options, so that USB boot and internal boot are in the first two spots. This will ensure the computer uses OpenCore as a boot option prior to Windows Boot Manager. 
 
 
-## Part 4: Brunch - install ChromeOS on a partition. Everything works! 
-Brunch installs into an image for our device and allows full access to the hardware with a few exceptions:
+## Part 4: Brunch - install ChromeOS on a partition.  
+Brunch installs really well on this machine, virtually everything works. Follow the dual boot instructions below, with a few notes:
  - The install instructions fail if booting from a Linux Live USB, as we only have 8GB of RAM and it fills up quickly with the Chrome OS image. To get around this, you will need to have Linux installed first in a partition.
  - Fingerprint reader does not work (expected behavior)   
 
