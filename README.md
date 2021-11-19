@@ -1,7 +1,7 @@
 # Microsoft Surface Laptop Go
 Install guide for booting Mac OS, Linux and ChromeOS with Brunch.
 
-<img src="SLG2.png" width="350"><img src="SLG3.png" width="350">
+<img src="SLG2.png" width="340"><img src="SLG3.png" width="340">
 
 ### Upgrade that SSD...
 This guide is for the 128GB / 256GB version only, as they have NVMe SSDs. If you have a 64GB it is EMMC, and part of the motherboard, so you can't upgrade it.
@@ -50,13 +50,13 @@ Windows 11 should be installed first if you want to use it.
 - In Windows (or using a Linux Live USB) make sure to partition your drive before jumping in to installing Mac OS. 
 
 ## Part 2: Linux (Manjaro, Fedora)
-Burn ISO, boot and configure. Manjaro worked perfectly for me.
+Burn ISO, boot and configure. Manjaro worked with full functionality except the fingerprint reader.
 
 <img src="SLG1.png" width="354">
 
 ## Part 3: MacOS 
 <img src="SLG.png" width="354"> 
-Download the lastest version of Opencore. I useed Big Sur on this hardware, YMMV with Monterey. 
+MacOS also works quite well, except for battery percentage, fingerprint reader and the touchpad is a bit wonky. Start with the lastest version of Opencore. I useed Big Sur on this hardware, YMMV with Monterey. 
  
 1. Download and set up your Mac OS X Big Sur USB install media. [gibMacOS](https://github.com/corpnewt/gibMacOS) 
     - Before you make the install USB, make sure it is formatted as APFS with GUID Partition Map.
