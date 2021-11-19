@@ -1,7 +1,6 @@
 # Microsoft Surface Laptop Go
 Install guide for booting Mac OS, Linux and ChromeOS with Brunch.
 
-|<img src="SLG1.png" width="354">      | <img src="SLG.png" width="354">      |
 |------------|-------------|
 |<img src="SLG2.png" width="354">|<img src="SLG3.png" width="354">|
 
@@ -53,6 +52,9 @@ Windows 11 should be installed first if you want to use it.
 
 ## Part 2: Linux (Manjaro, Fedora)
 Burn ISO, boot and configure. Manjaro worked perfectly for me.
+
+|------------|-------------|
+|<img src="SLG1.png" width="354">      | <img src="SLG.png" width="354">      |
 
 ## Part 3: MacOS 
 Download the lastest version of Opencore. I useed Big Sur on this hardware, YMMV with Monterey. 
