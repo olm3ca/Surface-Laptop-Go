@@ -55,7 +55,7 @@ Burn ISO, boot and configure. Manjaro worked with full functionality except the 
 <img src="SLG1.png" width="354">
 
 ## Part 3: MacOS 
-<img src="SLG.png" width="354"> 
+<img src="SLG4.png" width="354"> 
 MacOS also works quite well, except for battery percentage, fingerprint reader and the touchpad is a bit wonky. Start with the lastest version of Opencore. I useed Big Sur on this hardware, YMMV with Monterey. 
  
 1. Download and set up your Mac OS X Big Sur USB install media. [gibMacOS](https://github.com/corpnewt/gibMacOS) 
