@@ -74,7 +74,7 @@ MacOS also works quite well, except for battery percentage, fingerprint reader a
 
 4. Boot from the Mac OS installer. In Disk Utility, go to Show All Devices in the top left, and then select the entire drive, and format the partition you have identified for MacOS and make sure to use APFS.
   
-5. You will need to copy the EFI to your insternal SSD drive using the same procedure from step 3. In the UEFI boot settings (Hold Volume UP at boot) make sure you move Windows Boot Manager down in the list of boot options, so that USB boot and internal boot are in the first two spots. This will ensure the computer uses OpenCore as a boot option prior to Windows Boot Manager. 
+5. You will need to copy the EFI to your internal SSD drive using the same procedure from step 3. In the UEFI boot settings (Hold Volume UP at boot) make sure you move Windows Boot Manager down in the list of boot options, so that USB boot and internal boot are in the first two spots. This will ensure the computer uses OpenCore as a boot option prior to Windows Boot Manager. 
 
 
 ## Part 4: Brunch - install ChromeOS on a partition.  
@@ -83,8 +83,11 @@ Brunch installs really well on this machine, virtually everything works. Follow 
  - Fingerprint reader does not work (expected behavior)   
 
  1. Read the instructions on the official Brunch repo: [https://github.com/sebanc/brunch](https://github.com/sebanc/brunch)
- 2. [Go to CrOS Updates](https://cros-updates-serving.appspot.com/) and search for "rammus", then download the latest recvovery. 
+ 2. [Go to CrOS Updates](https://cros-updates-serving.appspot.com/) and search for "volteer", then download the latest recvovery. 
  3. You will need either an external mini SD card / USD to run Brunch off of, or you can create an EXT4 partition on the internal drive. Make sure it is at least 14GB in size - probably bigger than that if you plan to install any apps.
  4. After installing using the steps in the Brunch guide, you will be provided with a Grub menu to copy into your bootloader. 
+
+## Part 5: How to boot all of this? 
+With MacOS we have to boot with OpenCore, and Linux / Brunch use Grub. One way to tie it all together is with rEFInd. In Manjaro, install rEFInd using `pacman -S refind` and it will boot first, giving you the option to load OpenCore, Windows and Manjaro / grub. With grub you can boot Brunch if you configured it in part 4. 
 
 
