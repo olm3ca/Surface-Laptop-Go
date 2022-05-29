@@ -32,13 +32,13 @@ This hardware is quite simple to configure and works well with all three options
 |--------------------|----------------------|---------------------|-----------------|
 | WiFi               | Working              | Working             | Working         | 
 | Bluetooth          | Working              | Working             | Working	        | 
-| Suspend / Sleep    | Working              | Not Working         | Working         | 
+| Suspend / Sleep    | Working              | Working         | Working         | 
 | Touchpad           | Working	            | Working             | Working     | 
 | Graphics Accel.    | Working              | Working	            | Working    	    | 
 | Sound              | Working              | Working             | Working	    | 
 | Touchscreen        | Working              | Working             | Working         | 
 | Screen brightness  | Working		          | Working	            | Working	    | 
-| Power Management   | Working (Manjaro)    | Not Working	        | Working	    | 
+| Power Management   | Working (Manjaro)    | Working	        | Working	    | 
 
 
 ## Part 1: Disable bitlocker, TPM, and partition your SSD
@@ -65,10 +65,9 @@ MacOS also works quite well, except for battery percentage, fingerprint reader a
 2. Create your EFI based on the latest OC Guide for [this IceLake generation](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/icelake.html). A few notes on getting OpenCore to work, in my case:
   - Airportitwlm works perfectly with this wifi card, just make sure you get the version for version of MacOS you're using.
   - I tried all combinations of the ALC274 codec with AppleALC. No luck, but VoodooHDA works well. For now, I'll take it. Note: on Big Sur 11.3+ there is a fix that needs to be applied for audio to work, see [this post](https://www.insanelymac.com/forum/topic/314406-voodoohda-297/?do=findComment&comment=2756841) for more details.
-  - VoodooI2C + VoodooI2CHID will enable the touchscreen, but the touchpad won't work.
-  - VoodooI2C + VoodooI2ELAN will enable the touchpad, but the touchscreen won't work. I opted for this. 
+  - Use [BigSurface.kext](https://github.com/Xiashangning/BigSurface) for power management, touchpad and sleep. 
   - For iGPU to work, you'll need the iGPU.plist I've included in this repo in your device properties section. 
-  - Battery readouts may never work. Recent Surface models don't use ACPI Operating Regions/Fields to get their battery info.
+
     
 3. When the Mac OS install media is ready, mount the EFI partition with the [MountEFI](https://github.com/corpnewt/MountEFI) utility and copy the contents of the latest EFI linked above into this partition.
 
